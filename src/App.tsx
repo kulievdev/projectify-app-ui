@@ -24,6 +24,7 @@ const App = () => {
     return (
         <AppWrapper>
             <Link to="admin/sign-up">Admin Sign Up</Link>
+            <Link to="landing-page">Landing Page</Link>
             <Link to="admin/login">Admin Login</Link>
             <Link to="admin/forgot-password">Admin Forgot Password</Link>
             <Link to="admin/reset-password">Admin Reset Password</Link>

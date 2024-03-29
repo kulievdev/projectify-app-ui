@@ -26,11 +26,13 @@ import { AdminTeamMembers } from "../pages/admin-platform/team-members/AdminTeam
 import { TeamMemberPersonalTasks } from "../pages/team-member-platform/personal-tasks/TeamMemberPersonalTasks";
 import { SettingsPage, SupportPage } from "../pages/components";
 import { TeamMemberUser } from "../pages/team-member-platform/user/TeamMemberUser";
+import LandingPage from "../pages/landing-page/LandingPage";
 
 export const router = createBrowserRouter(
     createRoutesFromElements(
         <>
             <Route path="/" element={<App />} />
+            <Route path="landing-page" element={<LandingPage />} />
             <Route
                 path="admin/sign-up"
                 element={
