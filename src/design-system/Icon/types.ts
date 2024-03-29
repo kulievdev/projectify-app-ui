@@ -31,7 +31,12 @@ export type IconName =
     | "archive"
     | "arrow-left"
     | "pause-in-circle"
-    | "play-in-circle";
+    | "play-in-circle"
+    | "google"
+    | "airbnb"
+    | "creative"
+    | "shopify"
+    | "amazon";
 
 export type IconProps = {
     iconName: IconName;
