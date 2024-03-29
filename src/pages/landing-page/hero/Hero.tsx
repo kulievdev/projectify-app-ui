@@ -2,13 +2,12 @@ import styled from "styled-components";
 import { Badge, Button, Typography } from "../../../design-system";
 import heroImg from "../images/hero-image.png";
 import membersImg from "../images/members.png";
-import googleImg from "../images/google.png";
+import googleImg from "../images/googleSeo.png";
 
 const HeroSection = styled.section``;
 
 const HeroSectionContainer = styled.div`
     padding-top: var(--space-90);
-    padding-bottom: var(--space-90);
     display: flex;
     flex-direction: column;
     align-items: center;
