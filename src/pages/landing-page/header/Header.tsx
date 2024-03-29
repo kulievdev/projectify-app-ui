@@ -32,6 +32,7 @@ const CtaWrapper = styled.div`
 `;
 
 const SignUpButton = styled(Button)`
+    width: 12rem;
     background-color: transparent;
     border: 0.2rem solid var(--primary-500);
     color: var(--primary-500);
@@ -39,6 +40,7 @@ const SignUpButton = styled(Button)`
 `;
 
 const LoginButton = styled(Button)`
+    width: 12rem;
     padding: var(--space-10) var(--space-20);
 `;
 
