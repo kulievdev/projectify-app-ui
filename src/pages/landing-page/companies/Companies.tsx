@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import { Icon } from "../../../design-system";
 
+const customers = ["google", "airbnb", "creative", "shopify", "amazon"];
+
 const CompaniesSection = styled.section``;
 
 const CompaniesSectionContainer = styled.div`
@@ -19,11 +21,9 @@ const Companies = () => {
     return (
         <CompaniesSection>
             <CompaniesSectionContainer>
-                <CompanyIcon iconName="google" />
-                <CompanyIcon iconName="airbnb" />
-                <CompanyIcon iconName="creative" />
-                <CompanyIcon iconName="shopify" />
-                <CompanyIcon iconName="amazon" />
+                {customers.map((customerName) => (
+                    <CompanyIcon iconName={customerName} />
+                ))}
             </CompaniesSectionContainer>
         </CompaniesSection>
     );
