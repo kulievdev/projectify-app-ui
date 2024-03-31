@@ -39,7 +39,7 @@ export type IconName =
     | "amazon";
 
 export type IconProps = {
-    iconName: IconName;
+    iconName: IconName | string;
     className?: string;
     onClick?: () => void;
 };
