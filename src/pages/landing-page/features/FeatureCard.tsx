@@ -25,12 +25,7 @@ const FeatureCardIconWrapper = styled.div<{
     $iconWrapperBackgroundColor: string;
     $iconWrapperBorderColor: string;
 }>`
-    width: 10.8rem;
-    height: 10.8rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: var(--space-30) var(--space-34);
+    padding: var(--space-28);
     margin-bottom: var(--space-50);
     border: 0.1rem solid ${(props) => props.$iconWrapperBorderColor};
     border-radius: var(--space-32);
