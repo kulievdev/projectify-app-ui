@@ -2,8 +2,9 @@ import styled from "styled-components";
 import { Switch, Typography } from "../../../design-system";
 import currentPlans from "./currentPlans";
 import Plan from "./Plan";
+import Layout from "../components/Layout";
 
-const PricePlanSection = styled.section``;
+const PricePlanSection = styled(Layout)``;
 
 const PricePlanSectionContainer = styled.div`
     padding-top: 22rem;

@@ -2,8 +2,9 @@ import styled from "styled-components";
 import { Button, Typography } from "../../../design-system";
 import currentFeatures from "./currentFeatures";
 import FeatureCard from "./FeatureCard";
+import Layout from "../components/Layout";
 
-const FeaturesSection = styled.section``;
+const FeaturesSection = styled(Layout)``;
 
 const FeaturesSectionContainer = styled.div`
     padding-top: var(--space-100);

@@ -1,7 +1,8 @@
 import styled from "styled-components";
-import { Button, Logo, Typography } from "../../../design-system";
+import { Button, Logo } from "../../../design-system";
+import Layout from "../components/Layout";
 
-const HeaderWrapper = styled.header``;
+const HeaderWrapper = styled(Layout)``;
 
 const NavWrapper = styled.nav`
     display: flex;

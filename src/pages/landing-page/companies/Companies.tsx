@@ -1,9 +1,10 @@
 import styled from "styled-components";
 import { Icon } from "../../../design-system";
+import Layout from "../components/Layout";
 
 const customers = ["google", "airbnb", "creative", "shopify", "amazon"];
 
-const CompaniesSection = styled.section``;
+const CompaniesSection = styled(Layout)``;
 
 const CompaniesSectionContainer = styled.div`
     display: flex;
