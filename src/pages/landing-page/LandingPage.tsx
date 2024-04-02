@@ -4,6 +4,7 @@ import Hero from "./hero/Hero";
 import Companies from "./companies/Companies";
 import Features from "./features/Features";
 import PricePlans from "./price-plan/PricePlans";
+import RequestDemo from "./request-demo/RequestDemo";
 
 const LandingPageWrapper = styled.div`
     padding: 0 15rem;
@@ -15,13 +16,16 @@ const LandingPageWrapper = styled.div`
 
 const LandingPage = () => {
     return (
-        <LandingPageWrapper>
-            <Header />
-            <Hero />
-            <Companies />
-            <Features />
-            <PricePlans />
-        </LandingPageWrapper>
+        <>
+            <LandingPageWrapper>
+                <Header />
+                <Hero />
+                <Companies />
+                <Features />
+                <PricePlans />
+            </LandingPageWrapper>
+            <RequestDemo />
+        </>
     );
 };
 
