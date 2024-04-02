@@ -17,13 +17,11 @@ const LandingPageWrapper = styled.div`
 const LandingPage = () => {
     return (
         <>
-            <LandingPageWrapper>
-                <Header />
-                <Hero />
-                <Companies />
-                <Features />
-                <PricePlans />
-            </LandingPageWrapper>
+            <Header />
+            <Hero />
+            <Companies />
+            <Features />
+            <PricePlans />
             <RequestDemo />
         </>
     );

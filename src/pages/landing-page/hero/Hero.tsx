@@ -3,8 +3,9 @@ import { Badge, Button, Typography } from "../../../design-system";
 import heroImg from "../images/hero-image.png";
 import membersImg from "../images/members.png";
 import googleImg from "../images/googleSeo.png";
+import Layout from "../components/Layout";
 
-const HeroSection = styled.section``;
+const HeroSection = styled(Layout)``;
 
 const HeroSectionContainer = styled.div`
     padding-top: var(--space-90);
