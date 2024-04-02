@@ -113,7 +113,8 @@ const CtaButton = styled(Button)<{ $type: string }>`
     color: ${(props) =>
         props.$type === "primary" ? "var(--primary-500)" : ""};
 
-    &:hover {
+    &:hover,
+    &:focus {
         background-color: ${(props) =>
             props.$type === "primary" ? "var(--sunglow-500)" : ""};
         color: ${(props) => (props.$type === "primary" ? "var(--white)" : "")};
