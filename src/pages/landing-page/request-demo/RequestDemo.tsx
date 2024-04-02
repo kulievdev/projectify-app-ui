@@ -89,12 +89,8 @@ const RequestDemo = () => {
                     </ImageWrapper>
                     <Form>
                         <InputWrapper>
-                            <InputIcon iconName="email" />
-                            <Input
-                                style={{ color: "red" }}
-                                placeholder="Name"
-                                type="text"
-                            ></Input>
+                            <InputIcon iconName="user" />
+                            <Input placeholder="Name" type="text"></Input>
                         </InputWrapper>
                         <InputWrapper>
                             <InputIcon iconName="email" />
