@@ -22,8 +22,8 @@ const Companies = () => {
     return (
         <CompaniesSection>
             <CompaniesSectionContainer>
-                {customers.map((customerName) => (
-                    <CompanyIcon iconName={customerName} />
+                {customers.map((customerName, idx) => (
+                    <CompanyIcon key={idx} iconName={customerName} />
                 ))}
             </CompaniesSectionContainer>
         </CompaniesSection>

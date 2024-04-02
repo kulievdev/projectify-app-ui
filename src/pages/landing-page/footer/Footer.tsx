@@ -29,6 +29,7 @@ const UnorderedList = styled.ul`
 `;
 
 const List = styled.li`
+    cursor: pointer;
     list-style-type: none;
     color: var(--primary-500);
     font-size: var(--space-16);

@@ -189,8 +189,8 @@ const Plan: React.FC<PlanProps> = ({
                         Storage: <SpanText $type={type}>{storage}</SpanText>
                     </ServiceText>
                 </Service>
-                {extras.map((extraService) => (
-                    <Service>
+                {extras.map((extraService, idx) => (
+                    <Service key={idx}>
                         <Icon iconName={checkColor} />
                         <ServiceText
                             $type={type}

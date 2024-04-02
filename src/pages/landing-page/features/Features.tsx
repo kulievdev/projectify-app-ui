@@ -47,8 +47,9 @@ const Features = () => {
                     </Text>
                 </HeaderWrapper>
                 <FeaturesWrapper>
-                    {currentFeatures.map((feature) => (
+                    {currentFeatures.map((feature, idx) => (
                         <FeatureCard
+                            key={idx}
                             featureTitle={feature.title}
                             featureDescription={feature.description}
                             iconName={feature.iconName}
