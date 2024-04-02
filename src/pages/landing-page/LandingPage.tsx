@@ -5,6 +5,7 @@ import Companies from "./companies/Companies";
 import Features from "./features/Features";
 import PricePlans from "./price-plan/PricePlans";
 import RequestDemo from "./request-demo/RequestDemo";
+import Contact from "./contact/Contact";
 
 const LandingPageWrapper = styled.div`
     padding: 0 15rem;
@@ -23,6 +24,7 @@ const LandingPage = () => {
             <Features />
             <PricePlans />
             <RequestDemo />
+            <Contact />
         </>
     );
 };
