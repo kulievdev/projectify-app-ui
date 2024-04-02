@@ -7,6 +7,7 @@ import PricePlans from "./price-plan/PricePlans";
 import RequestDemo from "./request-demo/RequestDemo";
 import Contact from "./contact/Contact";
 import Footer from "./footer/Footer";
+import Testimonials from "./testimonials/Testimonials";
 
 const LandingPage = () => {
     return (
@@ -16,6 +17,7 @@ const LandingPage = () => {
             <Companies />
             <Features />
             <PricePlans />
+            {/* <Testimonials /> */}
             <RequestDemo />
             <Contact />
             <Footer />
