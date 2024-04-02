@@ -6,7 +6,7 @@ import officeLocation from "../images/office-map.png";
 const ContactSection = styled(Layout)``;
 
 const ContactSectionContainer = styled.div`
-    padding-top: var(--space-100);
+    padding: var(--space-100) 0;
     display: flex;
     gap: var(--space-30);
 `;
