@@ -7,7 +7,7 @@ import Layout from "../components/Layout";
 const PricePlanSection = styled(Layout)``;
 
 const PricePlanSectionContainer = styled.div`
-    padding-top: 22rem;
+    padding: 22rem 0 var(--space-80) 0;
 `;
 
 const HeaderWrapper = styled.div`
