@@ -77,8 +77,9 @@ const PricePlans = () => {
                     </ToggleWrapper>
                 </HeaderWrapper>
                 <PricePlansWrapper>
-                    {currentPlans.map((plan) => (
+                    {currentPlans.map((plan, idx) => (
                         <Plan
+                            key={idx}
                             type={plan.type}
                             subtitle={plan.subtitle}
                             iconName={plan.iconName}

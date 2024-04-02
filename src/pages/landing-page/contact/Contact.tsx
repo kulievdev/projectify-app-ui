@@ -53,6 +53,7 @@ const SocialMediaWrapper = styled.div`
 `;
 
 const SocialIcon = styled(Icon)`
+    cursor: pointer;
     width: var(--space-32);
     height: var(--space-32);
 `;
