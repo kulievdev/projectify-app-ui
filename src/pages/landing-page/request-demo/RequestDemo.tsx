@@ -3,16 +3,16 @@ import { Button, Icon, Typography } from "../../../design-system";
 import paperPlane from "../images/paperPlane.png";
 
 const RequestDemoSection = styled.section`
-    padding-top: var(--space-100);
     background: linear-gradient(to right, #6826f7, #bb9cfb);
 `;
 
 const RequestDemoContainer = styled.div`
     text-align: center;
-    padding: 0 15rem;
+
+    padding: var(--space-100) 15rem;
 
     @media (min-width: 1620px) {
-        padding: 0 37.5rem;
+        padding: var(--space-100) 37.5rem;
     }
 `;
 

@@ -41,7 +41,11 @@ const ContactIcon = styled(Icon)`
     height: var(--space-20);
 `;
 
-const Link = styled.a``;
+const Link = styled.a`
+    color: var(--jaguar-900);
+    font-size: var(--space-16);
+    line-height: var(--space-20);
+`;
 
 const SocialMediaWrapper = styled.div`
     display: flex;
@@ -74,27 +78,21 @@ const Contact = () => {
                 <SocialsWrapper>
                     <ContactWrapper>
                         <ContactIcon iconName="phone" />
-                        <Typography variant="paragraphSM">
-                            <Link href="tel:++1 (555) 555-11234">
-                                +1 (555) 555-11234
-                            </Link>
-                        </Typography>
+                        <Link href="tel:++1 (555) 555-11234">
+                            +1 (555) 555-11234
+                        </Link>
                     </ContactWrapper>
                     <ContactWrapper>
                         <ContactIcon iconName="email-purple" />
-                        <Typography variant="paragraphSM">
-                            <Link href="mailto:info@projectify.com">
-                                info@projectify.com
-                            </Link>
-                        </Typography>
+                        <Link href="mailto:info@projectify.com">
+                            info@projectify.com
+                        </Link>
                     </ContactWrapper>
                     <ContactWrapper>
                         <ContactIcon iconName="location" />
-                        <Typography variant="paragraphSM">
-                            <Link href="https://www.google.com/maps/dir/40.721471,-73.7644025/205+Allen+St,+New+York,+NY+10002/@40.7356654,-74.0472305,11z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x89c2598474c10bcf:0xd62d514f22a03f04!2m2!1d-73.9890753!2d40.7227487?entry=ttu">
-                                205 Allen St, New York, NY 10002, USA
-                            </Link>
-                        </Typography>
+                        <Link href="https://www.google.com/maps/dir/40.721471,-73.7644025/205+Allen+St,+New+York,+NY+10002/@40.7356654,-74.0472305,11z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x89c2598474c10bcf:0xd62d514f22a03f04!2m2!1d-73.9890753!2d40.7227487?entry=ttu">
+                            205 Allen St, New York, NY 10002, USA
+                        </Link>
                     </ContactWrapper>
                     <SocialMediaWrapper>
                         <SocialIcon iconName="facebook" />
