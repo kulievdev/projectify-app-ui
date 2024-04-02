@@ -6,14 +6,7 @@ import Features from "./features/Features";
 import PricePlans from "./price-plan/PricePlans";
 import RequestDemo from "./request-demo/RequestDemo";
 import Contact from "./contact/Contact";
-
-const LandingPageWrapper = styled.div`
-    padding: 0 15rem;
-
-    @media (min-width: 1620px) {
-        padding: 0 37.5rem;
-    }
-`;
+import Footer from "./footer/Footer";
 
 const LandingPage = () => {
     return (
@@ -25,6 +18,7 @@ const LandingPage = () => {
             <PricePlans />
             <RequestDemo />
             <Contact />
+            <Footer />
         </>
     );
 };
