@@ -8,7 +8,7 @@ import PricePlans from "./price-plan/PricePlans";
 const LandingPageWrapper = styled.div`
     padding: 0 15rem;
 
-    @media (min-width: 1920px) {
+    @media (min-width: 1620px) {
         padding: 0 37.5rem;
     }
 `;
