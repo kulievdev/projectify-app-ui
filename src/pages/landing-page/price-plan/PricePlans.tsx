@@ -3,6 +3,7 @@ import { Switch, Typography } from "../../../design-system";
 import currentPlans from "./currentPlans";
 import Plan from "./Plan";
 import Layout from "../components/Layout";
+import { useState } from "react";
 
 const PricePlanSection = styled(Layout)``;
 
@@ -58,6 +59,8 @@ const PricePlansWrapper = styled.div`
 `;
 
 const PricePlans = () => {
+    const [monthly, setMonthly] = useState(true);
+
     return (
         <PricePlanSection>
             <PricePlanSectionContainer>
@@ -76,9 +79,11 @@ const PricePlans = () => {
                             Billed yearly
                         </ToggleTextLeft>
                         <Switch
-                            checked={true}
+                            checked={monthly}
                             shape="circle"
-                            onSwitch={() => {}}
+                            onSwitch={() => {
+                                setMonthly(!monthly);
+                            }}
                         />
                         <Typography variant="paragraphSM" weight="medium">
                             Billed Monthly
@@ -94,7 +99,9 @@ const PricePlans = () => {
                             iconName={plan.iconName}
                             checkColor={plan.checkColor}
                             title={plan.title}
-                            price={plan.price}
+                            priceMonthly={plan.priceMonthly}
+                            priceYearly={plan.priceYearly}
+                            isMonthly={monthly}
                             projects={plan.projects}
                             users={plan.users}
                             storage={plan.storage}
