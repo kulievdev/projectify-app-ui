@@ -8,10 +8,13 @@ const RequestDemoSection = styled.section`
 
 const RequestDemoContainer = styled.div`
     text-align: center;
+    padding: var(--space-100) 2rem;
 
-    padding: var(--space-100) 15rem;
+    @media (min-width: 1275px) {
+        padding: var(--space-100) 15rem;
+    }
 
-    @media (min-width: 1620px) {
+    @media (min-width: 1720px) {
         padding: var(--space-100) 37.5rem;
     }
 `;
@@ -19,18 +22,31 @@ const RequestDemoContainer = styled.div`
 const Header = styled(Typography)`
     color: var(--white);
     margin-bottom: var(--space-50);
+
+    @media (max-width: 701px) {
+        font-size: var(--space-28);
+    }
 `;
 
 const ContentWrapper = styled.div`
-    display: flex;
     gap: var(--space-34);
+
+    @media (min-width: 700px) {
+        display: flex;
+    }
 `;
 
 const ImageWrapper = styled.div`
-    width: 50%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: var(--space-80);
+
+    @media (min-width: 700px) {
+        width: 50%;
+        margin-bottom: 0;
+    }
 `;
 
 const Image = styled.img`
@@ -38,7 +54,7 @@ const Image = styled.img`
 `;
 
 const Form = styled.form`
-    width: 50%;
+    width: 100%;
     display: flex;
     flex-direction: column;
 
@@ -48,6 +64,10 @@ const Form = styled.form`
 
     > *:nth-child(3) {
         margin-bottom: var(--space-30);
+    }
+
+    @media (min-width: 700px) {
+        width: 50%;
     }
 `;
 
