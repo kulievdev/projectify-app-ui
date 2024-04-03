@@ -1,4 +1,3 @@
-import styled from "styled-components";
 import Header from "./header/Header";
 import Hero from "./hero/Hero";
 import Companies from "./companies/Companies";

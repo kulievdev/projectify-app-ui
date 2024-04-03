@@ -7,7 +7,9 @@ type PlanProps = {
     iconName: string;
     checkColor: string;
     title: string;
-    price: string;
+    priceMonthly: string;
+    priceYearly: string;
+    isMonthly: boolean;
     projects: string;
     users: string;
     storage: string;
@@ -139,7 +141,9 @@ const Plan: React.FC<PlanProps> = ({
     iconName,
     checkColor,
     title,
-    price,
+    priceMonthly,
+    priceYearly,
+    isMonthly,
     projects,
     users,
     storage,
@@ -159,14 +163,14 @@ const Plan: React.FC<PlanProps> = ({
                 </Title>
                 <PriceWrapper>
                     <PriceText $type={type} variant="paragraphLG" weight="bold">
-                        {price}
+                        {isMonthly ? priceMonthly : priceYearly}
                     </PriceText>
                     <PriceSpan
                         $type={type}
                         variant="paragraphSM"
                         weight="medium"
                     >
-                        /month
+                        {isMonthly ? "/month" : "/year"}
                     </PriceSpan>
                 </PriceWrapper>
             </HeaderWrapper>
