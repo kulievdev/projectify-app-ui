@@ -25,17 +25,27 @@ const FeatureCardIconWrapper = styled.div<{
     $iconWrapperBackgroundColor: string;
     $iconWrapperBorderColor: string;
 }>`
-    padding: var(--space-28);
+    padding: var(--space-20);
     margin-bottom: var(--space-50);
     border: 0.1rem solid ${(props) => props.$iconWrapperBorderColor};
-    border-radius: var(--space-32);
+    border-radius: var(--space-24);
 
     background-color: ${(props) => props.$iconWrapperBackgroundColor};
+
+    @media (min-width: 550px) {
+        padding: var(--space-28);
+        border-radius: var(--space-32);
+    }
 `;
 
 const FeatureIcon = styled(Icon)`
-    width: var(--space-50);
-    height: var(--space-50);
+    width: var(--space-30);
+    height: var(--space-30);
+
+    @media (min-width: 550px) {
+        width: var(--space-50);
+        height: var(--space-50);
+    }
 `;
 
 const FeatureCardContentWrapper = styled.div`
@@ -47,10 +57,18 @@ const FeatureCardContentWrapper = styled.div`
 
 const FeatureTitle = styled(Typography)`
     margin-bottom: var(--space-8);
+
+    @media (max-width: 550px) {
+        font-size: var(--space-16);
+    }
 `;
 
 const FeatureText = styled(Typography)`
     color: var(--jaguar-500);
+
+    @media (max-width: 550px) {
+        font-size: var(--space-12);
+    }
 `;
 
 const FeatureCard: React.FC<FeatureCardProps> = ({
