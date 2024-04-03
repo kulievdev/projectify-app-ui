@@ -2,9 +2,9 @@ import styled from "styled-components";
 import { Button, Typography } from "../../../design-system";
 import currentFeatures from "./currentFeatures";
 import FeatureCard from "./FeatureCard";
-import Layout from "../components/Layout";
+import LayoutWrapper from "../components/LayoutWrapper";
 
-const FeaturesSection = styled(Layout)``;
+const FeaturesSection = styled(LayoutWrapper)``;
 
 const FeaturesSectionContainer = styled.div`
     padding-top: var(--space-40);
@@ -61,7 +61,7 @@ const DemoButton = styled(Button)`
 
 const Features = () => {
     return (
-        <FeaturesSection>
+        <FeaturesSection id="features">
             <FeaturesSectionContainer>
                 <HeaderWrapper>
                     <Header variant="h5" weight="bold">

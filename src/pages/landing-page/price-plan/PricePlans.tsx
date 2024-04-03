@@ -2,10 +2,10 @@ import styled from "styled-components";
 import { Switch, Typography } from "../../../design-system";
 import currentPlans from "./currentPlans";
 import Plan from "./Plan";
-import Layout from "../components/Layout";
 import { useState } from "react";
+import LayoutWrapper from "../components/LayoutWrapper";
 
-const PricePlanSection = styled(Layout)``;
+const PricePlanSection = styled(LayoutWrapper)``;
 
 const PricePlanSectionContainer = styled.div`
     padding: 7rem 0 var(--space-80) 0;
@@ -62,7 +62,7 @@ const PricePlans = () => {
     const [monthly, setMonthly] = useState(true);
 
     return (
-        <PricePlanSection>
+        <PricePlanSection id="price-plan">
             <PricePlanSectionContainer>
                 <HeaderWrapper>
                     <Subtitle variant="subtitleLG" weight="semibold">

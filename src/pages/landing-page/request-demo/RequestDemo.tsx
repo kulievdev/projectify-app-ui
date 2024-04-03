@@ -98,7 +98,7 @@ const RequestButton = styled(Button)`
 
 const RequestDemo = () => {
     return (
-        <RequestDemoSection>
+        <RequestDemoSection id="request-demo">
             <RequestDemoContainer>
                 <Header variant="h5" weight="bold">
                     Ready to get your hands on Projectify?!

@@ -1,9 +1,4 @@
-import React from "react";
 import styled from "styled-components";
-
-type LayoutProps = {
-    children: React.ReactNode;
-};
 
 const LayoutWrapper = styled.section`
     padding: 0 2rem;
@@ -17,8 +12,4 @@ const LayoutWrapper = styled.section`
     }
 `;
 
-const Layout: React.FC<LayoutProps> = ({ children }) => {
-    return <LayoutWrapper>{children}</LayoutWrapper>;
-};
-
-export default Layout;
+export default LayoutWrapper;

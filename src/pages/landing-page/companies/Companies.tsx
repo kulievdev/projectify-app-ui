@@ -1,10 +1,10 @@
 import styled from "styled-components";
 import { Icon } from "../../../design-system";
-import Layout from "../components/Layout";
+import LayoutWrapper from "../components/LayoutWrapper";
 
 const customers = ["google", "airbnb", "creative", "shopify", "amazon"];
 
-const CompaniesSection = styled(Layout)``;
+const CompaniesSection = styled(LayoutWrapper)``;
 
 const CompaniesSectionContainer = styled.div`
     display: flex;
@@ -43,7 +43,7 @@ const CompanyIcon = styled(Icon)`
 
 const Companies = () => {
     return (
-        <CompaniesSection>
+        <CompaniesSection id="companies">
             <CompaniesSectionContainer>
                 {customers.map((customerName, idx) => (
                     <CompanyIcon key={idx} iconName={customerName} />

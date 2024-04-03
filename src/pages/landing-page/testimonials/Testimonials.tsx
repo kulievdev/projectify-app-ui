@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import data from "./data";
 import styled from "styled-components";
-import Layout from "../components/Layout";
 import { Icon, Typography } from "../../../design-system";
+import LayoutWrapper from "../components/LayoutWrapper";
 
-const TestimonialsSection = styled(Layout)``;
+const TestimonialsSection = styled(LayoutWrapper)``;
 
 const TestimonialsSectionContainer = styled.div`
     text-align: center;
@@ -244,7 +244,7 @@ const Testimonials = () => {
     }, [index]);
 
     return (
-        <TestimonialsSection>
+        <TestimonialsSection id="testimonials">
             <TestimonialsSectionContainer>
                 <Header variant="h5" weight="bold">
                     Trust Our Clients
