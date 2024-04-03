@@ -22,7 +22,7 @@ const CompanyIcon = styled(Icon)`
         height: var(--space-20);
     }
 
-    @media (min-width: 700px) {
+    @media (min-width: 701px) {
         width: 9rem;
         height: var(--space-30);
     }
