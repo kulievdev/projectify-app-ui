@@ -18,15 +18,33 @@ const HeaderWrapper = styled.div`
     margin-bottom: var(--space-50);
 `;
 
-const Text = styled(Typography)`
+const Header = styled(Typography)`
+    @media (max-width: 550px) {
+        font-size: var(--space-24);
+    }
+`;
+
+const HeaderDescription = styled(Typography)`
     color: var(--jaguar-500);
+
+    @media (max-width: 550px) {
+        font-size: var(--space-12);
+    }
 `;
 
 const FeaturesWrapper = styled.div`
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(1, minmax(0, 1fr));
     gap: var(--space-30);
     margin-bottom: var(--space-50);
+
+    @media (min-width: 450px) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @media (min-width: 1000px) {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
 `;
 
 const DemoButton = styled(Button)`
@@ -38,13 +56,13 @@ const Features = () => {
         <FeaturesSection>
             <FeaturesSectionContainer>
                 <HeaderWrapper>
-                    <Typography variant="h5" weight="bold">
+                    <Header variant="h5" weight="bold">
                         Get the best for your team
-                    </Typography>
-                    <Text variant="paragraphSM" weight="medium">
+                    </Header>
+                    <HeaderDescription variant="paragraphSM" weight="medium">
                         Our solution provides simple yet effective project
                         management
-                    </Text>
+                    </HeaderDescription>
                 </HeaderWrapper>
                 <FeaturesWrapper>
                     {currentFeatures.map((feature, idx) => (
