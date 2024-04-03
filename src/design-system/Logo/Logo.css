@@ -37,15 +37,28 @@
 }
 
 .logo-small img {
-    height: 4rem;
-    width: 4.2rem;
+    height: 3rem;
+    width: 3.2rem;
+}
+
+@media screen and (min-width: 850px) {
+    .logo-small img {
+        height: 4rem;
+        width: 4.2rem;
+    }
 }
 
 .logo-small .logo__text {
-    font-size: var(--font-size-24);
-    line-height: var(--line-heigh-28);
+    font-size: var(--font-size-20);
+    line-height: var(--line-height-28);
     height: 4rem;
 
     display: flex;
     align-items: center;
+}
+
+@media screen and (min-width: 850px) {
+    .logo-small .logo__text {
+        font-size: var(--font-size-24);
+    }
 }
