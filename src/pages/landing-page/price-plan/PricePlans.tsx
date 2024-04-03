@@ -7,7 +7,11 @@ import Layout from "../components/Layout";
 const PricePlanSection = styled(Layout)``;
 
 const PricePlanSectionContainer = styled.div`
-    padding: 22rem 0 var(--space-80) 0;
+    padding: 7rem 0 var(--space-80) 0;
+
+    @media (min-width: 1000px) {
+        padding: 10rem 0 var(--space-80) 0;
+    }
 `;
 
 const HeaderWrapper = styled.div`
@@ -44,8 +48,13 @@ const ToggleTextLeft = styled(Typography)`
 `;
 
 const PricePlansWrapper = styled.div`
-    display: flex;
+    display: grid;
     gap: var(--space-30);
+
+    @media (min-width: 600px) {
+        display: flex;
+        flex-wrap: wrap;
+    }
 `;
 
 const PricePlans = () => {

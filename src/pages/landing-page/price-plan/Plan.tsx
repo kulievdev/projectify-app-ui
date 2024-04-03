@@ -43,9 +43,9 @@ const Subtitle = styled(Typography)<{ $type: string }>`
 `;
 
 const IconWrapper = styled.div<{ $type: string }>`
-    padding: var(--space-28);
+    padding: var(--space-20);
+    border-radius: var(--space-24);
     margin-bottom: var(--space-24);
-    border-radius: var(--space-32);
 
     background-color: ${(props) =>
         props.$type === "primary" ? "var(--sunglow-400)" : "var(--primary-50)"};
@@ -54,17 +54,29 @@ const IconWrapper = styled.div<{ $type: string }>`
             props.$type === "primary"
                 ? "var(--sunglow-400)"
                 : "var(--primary-100)"};
+
+    @media (min-width: 700px) {
+        padding: var(--space-28);
+        border-radius: var(--space-32);
+    }
 `;
 
 const PlanIcon = styled(Icon)`
-    width: var(--space-50);
-    height: var(--space-50);
+    width: var(--space-30);
+    height: var(--space-30);
 
-    fill: var(--white);
+    @media (min-width: 700px) {
+        width: var(--space-50);
+        height: var(--space-50);
+    }
 `;
 
 const Title = styled(Typography)<{ $type: string }>`
     color: ${(props) => (props.$type === "primary" ? "var(--white)" : "")};
+
+    @media (max-width: 701px) {
+        font-size: var(--space-24);
+    }
 `;
 
 const PriceWrapper = styled.div`
