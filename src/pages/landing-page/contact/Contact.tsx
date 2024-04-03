@@ -8,26 +8,49 @@ const ContactSection = styled(Layout)``;
 const ContactSectionContainer = styled.div`
     padding: var(--space-100) 0;
     display: flex;
-    gap: var(--space-30);
+    flex-direction: column;
+    gap: var(--space-50);
+
+    @media (min-width: 700px) {
+        flex-direction: row;
+    }
 `;
 
 const BrandWrapper = styled.div`
-    width: calc(100% - 37rem);
     display: flex;
     flex-direction: column;
-    gap: var(--space-30);
+    gap: var(--space-18);
+
+    @media (min-width: 550px) {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0;
+    }
+
+    @media (min-width: 700px) {
+        flex-direction: column;
+        align-items: unset;
+        justify-content: unset;
+        gap: var(--space-30);
+        width: calc(100% - 37rem);
+    }
 `;
 
 const BrandText = styled(Typography)`
-    width: calc(100% - 17rem);
+    @media (min-width: 700px) {
+        width: 70%;
+    }
 `;
 
 const SocialsWrapper = styled.div`
-    width: calc(100% - 37rem);
-
     display: flex;
     flex-direction: column;
     gap: var(--space-30);
+
+    @media (min-width: 700px) {
+        width: calc(100% - 37rem);
+    }
 `;
 
 const ContactWrapper = styled.div`
@@ -59,7 +82,9 @@ const SocialIcon = styled(Icon)`
 `;
 
 const ImageWrapper = styled.div`
-    width: calc(100% - 37rem);
+    @media (min-width: 700px) {
+        width: calc(100% - 37rem);
+    }
 `;
 
 const Image = styled.img`
