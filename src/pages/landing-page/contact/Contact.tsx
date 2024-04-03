@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import Layout from "../components/Layout";
 import { Icon, Logo, Typography } from "../../../design-system";
 import officeLocation from "../images/office-map.png";
+import LayoutWrapper from "../components/LayoutWrapper";
 
-const ContactSection = styled(Layout)``;
+const ContactSection = styled(LayoutWrapper)``;
 
 const ContactSectionContainer = styled.div`
     padding: var(--space-100) 0;
@@ -93,10 +93,12 @@ const Image = styled.img`
 
 const Contact = () => {
     return (
-        <ContactSection>
+        <ContactSection id="contact">
             <ContactSectionContainer>
                 <BrandWrapper>
-                    <Logo size="sm" layout="horizontal" />
+                    <Link href="#home">
+                        <Logo size="sm" layout="horizontal" />
+                    </Link>
                     <BrandText variant="paragraphSM" weight="bold">
                         Unleashing Success One Project at a Time!
                     </BrandText>

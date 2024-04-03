@@ -3,9 +3,9 @@ import { Badge, Button, Typography } from "../../../design-system";
 import heroImg from "../images/hero-image.png";
 import membersImg from "../images/members.png";
 import googleImg from "../images/googleSeo.png";
-import Layout from "../components/Layout";
+import LayoutWrapper from "../components/LayoutWrapper";
 
-const HeroSection = styled(Layout)``;
+const HeroSection = styled(LayoutWrapper)``;
 
 const HeroSectionContainer = styled.div`
     padding-top: var(--space-10);
@@ -134,7 +134,7 @@ const HeroGoogleImage = styled.img`
 
 const Hero = () => {
     return (
-        <HeroSection>
+        <HeroSection id="hero">
             <HeroSectionContainer>
                 <HeroContent>
                     <HeroHeader variant="h1" weight="semibold" align="center">

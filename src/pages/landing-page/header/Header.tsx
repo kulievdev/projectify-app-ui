@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import { Button, Logo } from "../../../design-system";
-import Layout from "../components/Layout";
 import HamburgerButton from "../components/HamburgerButton";
+import LayoutWrapper from "../components/LayoutWrapper";
 
-const HeaderWrapper = styled(Layout)``;
+const HeaderWrapper = styled(LayoutWrapper)``;
 
 const NavWrapper = styled.nav`
     display: flex;
@@ -56,12 +56,12 @@ const LoginButton = styled(Button)`
 
 const Header = () => {
     return (
-        <HeaderWrapper>
+        <HeaderWrapper id="home">
             <NavWrapper>
                 <Logo layout="horizontal" size="sm" />
                 <UnorderedList>
                     <List>
-                        <Link href="#about">About</Link>
+                        <Link href="#price-plan">Prices</Link>
                     </List>
                     <List>
                         <Link href="#testimonials">Testimonials</Link>

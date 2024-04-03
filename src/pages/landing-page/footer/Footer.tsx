@@ -70,7 +70,7 @@ const Link = styled.a``;
 
 const Footer = () => {
     return (
-        <FooterSection>
+        <FooterSection id="footer">
             <FooterContainer>
                 <CopyrightText variant="paragraphSM">
                     ©Projectify 2024 - All Rights Reserved.
