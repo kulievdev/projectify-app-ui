@@ -7,10 +7,18 @@ import Layout from "../components/Layout";
 const FeaturesSection = styled(Layout)``;
 
 const FeaturesSectionContainer = styled.div`
-    padding-top: var(--space-100);
+    padding-top: var(--space-40);
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @media (min-width: 600px) {
+        padding: var(--space-72) 0;
+    }
+
+    @media (min-width: 1000px) {
+        padding-top: var(--space-100);
+    }
 `;
 
 const HeaderWrapper = styled.div`
