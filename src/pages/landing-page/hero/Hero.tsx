@@ -8,10 +8,18 @@ import Layout from "../components/Layout";
 const HeroSection = styled(Layout)``;
 
 const HeroSectionContainer = styled.div`
-    padding-top: var(--space-90);
+    padding-top: var(--space-10);
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @media (min-width: 600px) {
+        padding-top: var(--space-40);
+    }
+
+    @media (min-width: 1000px) {
+        padding-top: var(--space-100);
+    }
 `;
 
 const HeroContent = styled.div`

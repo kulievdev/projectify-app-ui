@@ -10,7 +10,15 @@ const CompaniesSectionContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: var(--space-36) 0;
+    padding: var(--space-10) 0;
+
+    @media (min-width: 600px) {
+        padding: var(--space-20) 0;
+    }
+
+    @media (min-width: 1000px) {
+        padding: var(--space-30) 0;
+    }
 `;
 
 const CompanyIcon = styled(Icon)`
