@@ -14,8 +14,23 @@ const CompaniesSectionContainer = styled.div`
 `;
 
 const CompanyIcon = styled(Icon)`
-    width: 11.5rem;
-    height: var(--space-36);
+    width: 4rem;
+    height: var(--space-16);
+
+    @media (min-width: 500px) {
+        width: 6rem;
+        height: var(--space-20);
+    }
+
+    @media (min-width: 700px) {
+        width: 9rem;
+        height: var(--space-30);
+    }
+
+    @media (min-width: 1000px) {
+        width: 11.5rem;
+        height: var(--space-36);
+    }
 `;
 
 const Companies = () => {
