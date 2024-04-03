@@ -8,7 +8,7 @@ const data = [
         image: guy1,
         name: "Jason Herzog",
         title: "Project Manager at Google",
-        rating: 5,
+        rating: Array(5).fill(null),
         description:
             "Projectify App is a game-changer for project management. Its user-friendly interface and intuitive features make handling multiple projects a breeze."
     },
@@ -17,7 +17,7 @@ const data = [
         image: guy2,
         name: "Gerald Rivera",
         title: "Staff Engineer at Meta",
-        rating: 4,
+        rating: Array(4).fill(null),
         description:
             "Discovering Projectify App has revolutionized the way we handle projects. Its robust set of tools simplifies complex tasks, making project management less daunting."
     },
@@ -26,7 +26,7 @@ const data = [
         image: lady,
         name: "Ashley Bennett",
         title: "UX/UI Designer at Uber",
-        rating: 5,
+        rating: Array(5).fill(null),
         description:
             "Projectify App exceeded all our expectations. Its comprehensive suite of features empowers us to manage projects with precision and agility."
     }

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import data from "./data";
 import styled from "styled-components";
 import Layout from "../components/Layout";
-import { Typography } from "../../../design-system";
+import { Icon, Typography } from "../../../design-system";
 
 const TestimonialsSection = styled(Layout)``;
 
@@ -16,7 +16,7 @@ const Header = styled(Typography)`
 `;
 
 const ContentWrapper = styled.div`
-    height: 40rem;
+    height: 50rem;
     position: relative;
     overflow: hidden;
 `;
@@ -60,10 +60,36 @@ const Title = styled(Typography)`
     margin-bottom: var(--space-32);
 `;
 
+const StarsWrapper = styled.div`
+    width: max-content;
+    margin: 0 auto;
+    display: flex;
+    gap: var(--space-18);
+    margin-bottom: var(--space-36);
+`;
+
 const Description = styled(Typography)`
     color: var(--jaguar-700);
     max-width: 60rem;
     margin: 0 auto;
+    margin-bottom: var(--space-50);
+`;
+
+const PageCountWrapper = styled.div`
+    width: max-content;
+    margin: 0 auto;
+    display: flex;
+    gap: var(--space-20);
+`;
+
+const PageCount = styled.div<{ $active: boolean }>`
+    cursor: pointer;
+    width: var(--space-20);
+    height: var(--space-20);
+    border: none;
+    border-radius: var(--space-8);
+    background-color: ${(props) =>
+        props.$active ? "var(--primary-500)" : "var(--jaguar-100)"};
 `;
 
 const PrevButton = styled.button`
@@ -78,6 +104,25 @@ const PrevButton = styled.button`
     background-color: var(--white);
     cursor: pointer;
     transition: all 0.3s linear;
+
+    svg {
+        fill: var(--primary-500);
+    }
+
+    &:hover,
+    &:focus {
+        border: none;
+        background-color: var(--primary-500);
+
+        svg {
+            fill: var(--white);
+        }
+    }
+`;
+
+const PrevIcon = styled(Icon)`
+    width: 4rem;
+    height: 4rem;
 `;
 
 const NextButton = styled.button`
@@ -93,13 +138,35 @@ const NextButton = styled.button`
     background-color: var(--white);
     cursor: pointer;
     transition: all 0.3s linear;
+
+    svg {
+        fill: var(--primary-500);
+    }
+
+    &:hover,
+    &:focus {
+        border: none;
+        background-color: var(--primary-500);
+
+        svg {
+            fill: var(--white);
+        }
+    }
+`;
+
+const NextIcon = styled(Icon)`
+    width: 3rem;
+    height: 3rem;
 `;
 
 const Testimonials = () => {
     const [people] = useState(data);
     const [index, setIndex] = useState(0);
+    const [activePage, setActivePage] = useState(0);
 
     useEffect(() => {
+        setActivePage(index);
+
         const lastIndex = people.length - 1;
         if (index < 0) {
             setIndex(lastIndex);
@@ -122,11 +189,12 @@ const Testimonials = () => {
         <TestimonialsSection>
             <TestimonialsSectionContainer>
                 <Header variant="h5" weight="bold">
-                    Trust our clients
+                    Trust Our Clients
                 </Header>
                 <ContentWrapper>
                     {people.map((person, personIdx) => {
-                        const { id, image, name, title, description } = person;
+                        const { id, image, name, title, rating, description } =
+                            person;
                         let position = "nextSlide";
                         if (personIdx === index) {
                             position = "activeSlide";
@@ -146,20 +214,34 @@ const Testimonials = () => {
                                 <Title variant="subtitleLG" weight="medium">
                                     {title}
                                 </Title>
+                                <StarsWrapper>
+                                    {rating.map((_, idx) => {
+                                        return <Icon iconName="star" />;
+                                    })}
+                                </StarsWrapper>
                                 <Description
                                     variant="paragraphMD"
                                     weight="medium"
                                 >
                                     {description}
                                 </Description>
+                                <PageCountWrapper>
+                                    {people.map((_, idx) => (
+                                        <PageCount
+                                            key={idx}
+                                            $active={idx === activePage}
+                                            onClick={() => setIndex(idx)}
+                                        />
+                                    ))}
+                                </PageCountWrapper>
                             </Article>
                         );
                     })}
                     <PrevButton onClick={() => setIndex(index - 1)}>
-                        Prev
+                        <PrevIcon iconName="arrow-left" />
                     </PrevButton>
                     <NextButton onClick={() => setIndex(index + 1)}>
-                        Next
+                        <NextIcon iconName="arrow-right" />
                     </NextButton>
                 </ContentWrapper>
             </TestimonialsSectionContainer>
