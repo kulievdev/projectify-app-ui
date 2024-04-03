@@ -216,7 +216,9 @@ const Testimonials = () => {
                                 </Title>
                                 <StarsWrapper>
                                     {rating.map((_, idx) => {
-                                        return <Icon iconName="star" />;
+                                        return (
+                                            <Icon key={idx} iconName="star" />
+                                        );
                                     })}
                                 </StarsWrapper>
                                 <Description

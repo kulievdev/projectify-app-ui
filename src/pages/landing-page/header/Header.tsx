@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Button, Logo } from "../../../design-system";
 import Layout from "../components/Layout";
+import HamburgerButton from "../components/HamburgerButton";
 
 const HeaderWrapper = styled(Layout)``;
 
@@ -12,8 +13,12 @@ const NavWrapper = styled.nav`
 `;
 
 const UnorderedList = styled.ul`
-    display: flex;
+    display: none;
     gap: var(--space-28);
+
+    @media (min-width: 850px) {
+        display: flex;
+    }
 `;
 
 const List = styled.li`
@@ -28,8 +33,12 @@ const Link = styled.a`
 `;
 
 const CtaWrapper = styled.div`
-    display: flex;
+    display: none;
     gap: var(--space-10);
+
+    @media (min-width: 850px) {
+        display: flex;
+    }
 `;
 
 const SignUpButton = styled(Button)`
@@ -62,13 +71,14 @@ const Header = () => {
                     </List>
                 </UnorderedList>
                 <CtaWrapper>
-                    <SignUpButton size="sm" shape="circle">
+                    <SignUpButton size="md" shape="circle">
                         Sign up
                     </SignUpButton>
-                    <LoginButton color="primary" size="sm" shape="circle">
+                    <LoginButton color="primary" size="md" shape="circle">
                         Login
                     </LoginButton>
                 </CtaWrapper>
+                <HamburgerButton />
             </NavWrapper>
         </HeaderWrapper>
     );
