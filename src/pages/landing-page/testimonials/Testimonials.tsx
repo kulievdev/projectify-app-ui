@@ -8,7 +8,10 @@ const TestimonialsSection = styled(Layout)``;
 
 const TestimonialsSectionContainer = styled.div`
     text-align: center;
-    padding: var(--space-100) 0;
+
+    @media (min-width: 700px) {
+        padding: var(--space-72) 0;
+    }
 `;
 
 const Header = styled(Typography)`
@@ -43,12 +46,17 @@ const Article = styled.article`
 `;
 
 const Avatar = styled.img`
-    width: 17rem;
-    height: 17rem;
+    width: 12rem;
+    height: 12rem;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: var(--space-20);
     box-shadow: 0 var(--space-6) var(--space-16) rgba(0, 0, 0, 0.2);
+
+    @media (min-width: 700px) {
+        width: 17rem;
+        height: 17rem;
+    }
 `;
 
 const Name = styled(Typography)`
@@ -84,12 +92,18 @@ const PageCountWrapper = styled.div`
 
 const PageCount = styled.div<{ $active: boolean }>`
     cursor: pointer;
-    width: var(--space-20);
-    height: var(--space-20);
+    width: var(--space-14);
+    height: var(--space-14);
     border: none;
-    border-radius: var(--space-8);
+    border-radius: var(--space-4);
     background-color: ${(props) =>
         props.$active ? "var(--primary-500)" : "var(--jaguar-100)"};
+
+    @media (min-width: 700px) {
+        width: var(--space-20);
+        height: var(--space-20);
+        border-radius: var(--space-8);
+    }
 `;
 
 const PrevButton = styled.button`
@@ -97,10 +111,10 @@ const PrevButton = styled.button`
     left: 0;
     top: 20rem;
     transform: translateY(-50%);
-    width: 8.4rem;
-    height: 8.4rem;
+    width: 4.4rem;
+    height: 4.4rem;
+    border-radius: var(--space-10);
     border: 0.15rem solid var(--jaguar-100);
-    border-radius: var(--space-24);
     background-color: var(--white);
     cursor: pointer;
     transition: all 0.3s linear;
@@ -118,11 +132,33 @@ const PrevButton = styled.button`
             fill: var(--white);
         }
     }
+
+    @media (min-width: 400px) {
+        width: 5.4rem;
+        height: 5.4rem;
+        border-radius: var(--space-16);
+    }
+
+    @media (min-width: 700px) {
+        width: 8.4rem;
+        height: 8.4rem;
+        border-radius: var(--space-24);
+    }
 `;
 
 const PrevIcon = styled(Icon)`
-    width: 4rem;
-    height: 4rem;
+    width: 2.7rem;
+    height: 2.7rem;
+
+    @media (min-width: 400px) {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    @media (min-width: 700px) {
+        width: 4rem;
+        height: 4rem;
+    }
 `;
 
 const NextButton = styled.button`
@@ -131,10 +167,10 @@ const NextButton = styled.button`
     top: 20rem;
     top: 20rem;
     transform: translateY(-50%);
-    width: 8.4rem;
-    height: 8.4rem;
+    width: 4.4rem;
+    height: 4.4rem;
+    border-radius: var(--space-10);
     border: 0.15rem solid var(--jaguar-100);
-    border-radius: var(--space-24);
     background-color: var(--white);
     cursor: pointer;
     transition: all 0.3s linear;
@@ -152,11 +188,33 @@ const NextButton = styled.button`
             fill: var(--white);
         }
     }
+
+    @media (min-width: 400px) {
+        width: 5.4rem;
+        height: 5.4rem;
+        border-radius: var(--space-16);
+    }
+
+    @media (min-width: 700px) {
+        width: 8.4rem;
+        height: 8.4rem;
+        border-radius: var(--space-24);
+    }
 `;
 
 const NextIcon = styled(Icon)`
-    width: 3rem;
-    height: 3rem;
+    width: 1.7rem;
+    height: 1.7rem;
+
+    @media (min-width: 400px) {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    @media (min-width: 700px) {
+        width: 3rem;
+        height: 3rem;
+    }
 `;
 
 const Testimonials = () => {
