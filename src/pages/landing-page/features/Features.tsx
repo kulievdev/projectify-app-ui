@@ -19,7 +19,7 @@ const HeaderWrapper = styled.div`
 `;
 
 const Header = styled(Typography)`
-    @media (max-width: 550px) {
+    @media (max-width: 700px) {
         font-size: var(--space-24);
     }
 `;
@@ -27,7 +27,7 @@ const Header = styled(Typography)`
 const HeaderDescription = styled(Typography)`
     color: var(--jaguar-500);
 
-    @media (max-width: 550px) {
+    @media (max-width: 700px) {
         font-size: var(--space-12);
     }
 `;
@@ -38,7 +38,7 @@ const FeaturesWrapper = styled.div`
     gap: var(--space-30);
     margin-bottom: var(--space-50);
 
-    @media (min-width: 450px) {
+    @media (min-width: 650px) {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 

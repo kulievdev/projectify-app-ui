@@ -32,7 +32,7 @@ const FeatureCardIconWrapper = styled.div<{
 
     background-color: ${(props) => props.$iconWrapperBackgroundColor};
 
-    @media (min-width: 550px) {
+    @media (min-width: 700px) {
         padding: var(--space-28);
         border-radius: var(--space-32);
     }
@@ -42,7 +42,7 @@ const FeatureIcon = styled(Icon)`
     width: var(--space-30);
     height: var(--space-30);
 
-    @media (min-width: 550px) {
+    @media (min-width: 700px) {
         width: var(--space-50);
         height: var(--space-50);
     }
@@ -58,7 +58,7 @@ const FeatureCardContentWrapper = styled.div`
 const FeatureTitle = styled(Typography)`
     margin-bottom: var(--space-8);
 
-    @media (max-width: 550px) {
+    @media (max-width: 700px) {
         font-size: var(--space-16);
     }
 `;
@@ -66,7 +66,7 @@ const FeatureTitle = styled(Typography)`
 const FeatureText = styled(Typography)`
     color: var(--jaguar-500);
 
-    @media (max-width: 550px) {
+    @media (max-width: 700px) {
         font-size: var(--space-12);
     }
 `;
