@@ -5,7 +5,6 @@ export * from "./Label";
 export * from "./Modal";
 export * from "./Logo";
 export * from "./Icon";
-export * from "./SideBar";
 export * from "./Toast";
 export * from "./Badge";
 export * from "./DatePicker";
@@ -16,5 +15,6 @@ export * from "./Checkbox";
 export * from "./Switch";
 export * from "./Progress";
 export * from "./Table";
+export * from "./SideBar";
 
 export * from "./utils";
