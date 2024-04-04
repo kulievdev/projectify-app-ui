@@ -56,17 +56,22 @@ const UnorderedList = styled.ul`
 const List = styled.li`
     cursor: pointer;
     list-style-type: none;
+`;
+
+const Link = styled.a`
     color: var(--primary-500);
     font-size: var(--space-14);
     line-height: var(--space-24);
     font-weight: 500;
 
+    &:visited {
+        color: var(--primary-500);
+    }
+
     @media (min-width: 450px) {
         font-size: var(--space-16);
     }
 `;
-
-const Link = styled.a``;
 
 const Footer = () => {
     return (
@@ -84,7 +89,9 @@ const Footer = () => {
                             <Link>FAQ</Link>
                         </List>
                         <List>
-                            <Link>Sitemap</Link>
+                            <Link href="https://www.google.com/maps/dir/40.721471,-73.7644025/205+Allen+St,+New+York,+NY+10002/@40.7379299,-74.0472305,11z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x89c2598474c10bcf:0xd62d514f22a03f04!2m2!1d-73.9890753!2d40.7227487?entry=ttu">
+                                Sitemap
+                            </Link>
                         </List>
                         <List>
                             <Link>Privacy Policy</Link>

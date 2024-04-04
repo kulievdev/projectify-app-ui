@@ -118,21 +118,29 @@ const Contact = () => {
                     </ContactWrapper>
                     <ContactWrapper>
                         <ContactIcon iconName="location" />
-                        <Link href="https://www.google.com/maps/dir/40.721471,-73.7644025/205+Allen+St,+New+York,+NY+10002/@40.7356654,-74.0472305,11z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x89c2598474c10bcf:0xd62d514f22a03f04!2m2!1d-73.9890753!2d40.7227487?entry=ttu">
+                        <Link href="https://www.google.com/search?q=205+Allen+St%2C+New+York%2C+NY+10002%2C+USA&rlz=1C5CHFA_enUS964US964&oq=205+Allen+St%2C+New+York%2C+NY+10002%2C+USA&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg70gEHMzg5ajBqN6gCALACAA&sourceid=chrome&ie=UTF-8">
                             205 Allen St, New York, NY 10002, USA
                         </Link>
                     </ContactWrapper>
                     <SocialMediaWrapper>
-                        <SocialIcon iconName="facebook" />
-                        <SocialIcon iconName="twitter" />
-                        <SocialIcon iconName="instagram" />
+                        <Link href="https://www.facebook.com/">
+                            <SocialIcon iconName="facebook" />
+                        </Link>
+                        <Link href="https://twitter.com/">
+                            <SocialIcon iconName="twitter" />
+                        </Link>
+                        <Link href="https://www.instagram.com/">
+                            <SocialIcon iconName="instagram" />
+                        </Link>
                     </SocialMediaWrapper>
                 </SocialsWrapper>
                 <ImageWrapper>
-                    <Image
-                        src={officeLocation}
-                        alt="Office Location Screenshot"
-                    />
+                    <Link href="https://www.google.com/maps/dir/40.721471,-73.7644025/205+Allen+St,+New+York,+NY+10002/@40.7379299,-74.0472305,11z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x89c2598474c10bcf:0xd62d514f22a03f04!2m2!1d-73.9890753!2d40.7227487?entry=ttu">
+                        <Image
+                            src={officeLocation}
+                            alt="Office Location Screenshot"
+                        />
+                    </Link>
                 </ImageWrapper>
             </ContactSectionContainer>
         </ContactSection>
