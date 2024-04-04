@@ -6,7 +6,7 @@ type HamburgerButtonProps = {
     setIsActive: (value: boolean) => void;
 };
 
-const HamburgerWrapper = styled.button`
+const HamburgerWrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
