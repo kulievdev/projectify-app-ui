@@ -10,20 +10,25 @@ type AuthWrapperProps = {
 };
 
 const Wrapper = styled.main`
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 100vh;
+    @media (min-width: 1300px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 100vh;
+    }
 `;
 
 const AuthForm = styled.section<{ $switchLayout?: boolean }>`
-    grid-row: 1 / 2;
-    grid-column: ${(props) => (props.$switchLayout ? "2 / 3" : "1 / 2")};
+    padding: var(--space-20);
 
-    padding: var(--space-50);
+    @media (min-width: 600px) {
+        padding: var(--space-50);
+        grid-row: 1 / 2;
+        grid-column: ${(props) => (props.$switchLayout ? "2 / 3" : "1 / 2")};
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 `;
 
 const AuthContent = styled.div`
@@ -35,9 +40,13 @@ const AuthContent = styled.div`
 `;
 
 const AuthImageWrapper = styled.section<{ $switchLayout?: boolean }>`
-    grid-row: 1 / 2;
-    grid-column: ${(props) => (props.$switchLayout ? "1 / 2 " : "2 / 3")};
-    padding: var(--space-50);
+    padding: var(--space-20);
+
+    @media (min-width: 600px) {
+        padding: var(--space-50);
+        grid-row: 1 / 2;
+        grid-column: ${(props) => (props.$switchLayout ? "1 / 2 " : "2 / 3")};
+    }
 `;
 
 const AuthImage = styled.img`
