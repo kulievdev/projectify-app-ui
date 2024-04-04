@@ -80,11 +80,12 @@ const InputWrapper = styled.div`
 const Input = styled.input`
     width: 100%;
     padding: var(--space-16) var(--space-48);
-    border: 0.15rem solid var(--jaguar-200);
+    border: 0.3rem solid var(--jaguar-100);
     border-radius: var(--space-16);
 
     &:focus {
-        outline: 0.4rem solid var(--primary-500);
+        outline: none;
+        border: 0.3rem solid var(--primary-500);
     }
 `;
 
