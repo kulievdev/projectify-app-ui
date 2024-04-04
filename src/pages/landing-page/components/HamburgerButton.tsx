@@ -13,7 +13,7 @@ const HamburgerWrapper = styled.button`
     transition: transform 0.3s ease;
 
     &.active .stick-long:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
+        transform: rotate(45deg) translate(0.5rem, 0.5rem);
     }
 
     &.active .stick-short {
@@ -21,7 +21,7 @@ const HamburgerWrapper = styled.button`
     }
 
     &.active .stick-long:nth-child(3) {
-        transform: rotate(-45deg) translate(5px, -5px);
+        transform: rotate(-45deg) translate(0.5rem, -0.5rem);
     }
 
     @media (min-width: 850px) {
