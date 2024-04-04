@@ -92,7 +92,7 @@ const DatePickerV1: React.FC<DatePickerProps> = ({
                         className="v1-date-picker__calendar-icon"
                     />
                 }
-                // toggleCalendarOnIconClick
+                toggleCalendarOnIconClick
                 startDate={startDate}
                 endDate={endDate}
             />
