@@ -2,14 +2,19 @@ import styled from "styled-components";
 import { Button, Logo } from "../../../design-system";
 import HamburgerButton from "../components/HamburgerButton";
 import LayoutWrapper from "../components/LayoutWrapper";
+import { useState } from "react";
 
-const HeaderWrapper = styled(LayoutWrapper)``;
+const NavWrapper = styled(LayoutWrapper)``;
 
-const NavWrapper = styled.nav`
-    display: flex;
+const Navigation = styled.nav<{ $isActive: boolean }>`
+    display: ${(props) => (props.$isActive ? "none" : "flex")};
     align-items: center;
     justify-content: space-between;
     padding: var(--space-24) 0;
+
+    @media (min-width: 850px) {
+        display: flex;
+    }
 `;
 
 const UnorderedList = styled.ul`
@@ -54,10 +59,60 @@ const LoginButton = styled(Button)`
     padding: var(--space-10) var(--space-20);
 `;
 
+const MobileNavWrapper = styled.div`
+    display: block;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(
+        to bottom,
+        var(--dodger-blue-12),
+        var(--dodger-blue-25)
+    );
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: auto;
+
+    @media (min-width: 850px) {
+        display: none;
+    }
+`;
+
+const MobileNavHeader = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-24) 4rem var(--space-24) 2rem;
+    margin-bottom: var(--space-50);
+`;
+
+const MobileNav = styled.nav`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`;
+
+const MobileUnorderedList = styled.ul`
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: var(--space-28);
+    margin-bottom: var(--space-50);
+`;
+
+const MobileCtaWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-10);
+`;
+
 const Navbar = () => {
+    const [isActive, setIsActive] = useState(false);
+
     return (
-        <HeaderWrapper id="home">
-            <NavWrapper>
+        <NavWrapper id="home">
+            <Navigation $isActive={isActive}>
                 <Logo layout="horizontal" size="sm" />
                 <UnorderedList>
                     <List>
@@ -78,9 +133,78 @@ const Navbar = () => {
                         Login
                     </LoginButton>
                 </CtaWrapper>
-                <HamburgerButton />
-            </NavWrapper>
-        </HeaderWrapper>
+                <HamburgerButton
+                    isActive={isActive}
+                    setIsActive={setIsActive}
+                />
+            </Navigation>
+            {isActive && (
+                <MobileNavWrapper>
+                    <MobileNavHeader>
+                        <Logo layout="horizontal" size="sm" />
+                        <HamburgerButton
+                            isActive={isActive}
+                            setIsActive={setIsActive}
+                        />
+                    </MobileNavHeader>
+                    <MobileNav>
+                        <MobileUnorderedList>
+                            <List>
+                                <Link
+                                    href="#price-plan"
+                                    onClick={() => {
+                                        setIsActive(false);
+                                    }}
+                                >
+                                    Prices
+                                </Link>
+                            </List>
+                            <List>
+                                <Link
+                                    href="#testimonials"
+                                    onClick={() => {
+                                        setIsActive(false);
+                                    }}
+                                >
+                                    Testimonials
+                                </Link>
+                            </List>
+                            <List>
+                                <Link
+                                    href="#contact"
+                                    onClick={() => {
+                                        setIsActive(false);
+                                    }}
+                                >
+                                    Contact
+                                </Link>
+                            </List>
+                        </MobileUnorderedList>
+                        <MobileCtaWrapper>
+                            <SignUpButton
+                                size="md"
+                                shape="circle"
+                                onClick={() => {
+                                    setIsActive(false);
+                                }}
+                            >
+                                Sign up
+                            </SignUpButton>
+                            <LoginButton
+                                color="primary"
+                                size="md"
+                                shape="circle"
+                                onClick={() => {
+                                    setIsActive(false);
+                                }}
+                            >
+                                Login
+                            </LoginButton>
+                        </MobileCtaWrapper>
+                    </MobileNav>
+                </MobileNavWrapper>
+            )}
+        </NavWrapper>
     );
 };
 
