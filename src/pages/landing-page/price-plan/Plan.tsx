@@ -225,7 +225,7 @@ const Plan: React.FC<PlanProps> = ({
                 shape="circle"
                 color="primary"
             >
-                Try free for 15 days
+                {isMonthly ? "Try free for 15 days" : "30 Days Free Trial"}
             </CtaButton>
         </PlanCardWrapper>
     );
