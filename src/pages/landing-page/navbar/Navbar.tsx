@@ -54,7 +54,7 @@ const LoginButton = styled(Button)`
     padding: var(--space-10) var(--space-20);
 `;
 
-const Header = () => {
+const Navbar = () => {
     return (
         <HeaderWrapper id="home">
             <NavWrapper>
@@ -84,4 +84,4 @@ const Header = () => {
     );
 };
 
-export default Header;
+export default Navbar;

@@ -1,4 +1,4 @@
-import Header from "./header/Header";
+import Navbar from "./navbar/Navbar";
 import Hero from "./hero/Hero";
 import Companies from "./companies/Companies";
 import Features from "./features/Features";
@@ -11,7 +11,7 @@ import Testimonials from "./testimonials/Testimonials";
 const LandingPage = () => {
     return (
         <>
-            <Header />
+            <Navbar />
             <Hero />
             <Companies />
             <Features />
