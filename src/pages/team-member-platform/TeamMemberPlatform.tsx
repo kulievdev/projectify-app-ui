@@ -1,7 +1,7 @@
 import { Outlet, useNavigate } from "react-router-dom";
 import { AppPage, AppLayout, SideBarUser } from "../components";
 import { useLocalStorage, useStore } from "../../hooks";
-import { SideBar, SideBarLinks, Toaster } from "../../design-system";
+import { SideBarNav, SideBarNavLinks, Toaster } from "../../design-system";
 import { teamMemberLinks } from "./teamMemberLinks";
 import { Actions } from "../../store";
 
@@ -23,7 +23,7 @@ const TeamMemberPlatform = () => {
     return (
         <>
             <AppLayout>
-                <SideBar>
+                <SideBarNav>
                     <SideBarUser
                         details={{
                             firstName: user?.firstName || "",
@@ -33,8 +33,8 @@ const TeamMemberPlatform = () => {
                         }}
                         onClick={() => navigate("me")}
                     />
-                    <SideBarLinks links={teamMemberLinks} logOut={logOut} />
-                </SideBar>
+                    <SideBarNavLinks links={teamMemberLinks} logOut={logOut} />
+                </SideBarNav>
                 <AppPage>
                     <Outlet />
                 </AppPage>

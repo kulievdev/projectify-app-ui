@@ -1,5 +1,5 @@
 import { Outlet, useNavigate } from "react-router-dom";
-import { SideBar, SideBarLinks, Toaster } from "../../design-system";
+import { SideBarNav, SideBarNavLinks, Toaster } from "../../design-system";
 import { AppLayout, AppPage, SideBarUser } from "../components";
 import { Actions } from "../../store/actions";
 import { useLocalStorage, useStore } from "../../hooks";
@@ -24,7 +24,7 @@ const AdminPlatform = () => {
     return (
         <>
             <AppLayout>
-                <SideBar>
+                <SideBarNav>
                     <SideBarUser
                         details={{
                             firstName: user?.firstName || "",
@@ -34,8 +34,8 @@ const AdminPlatform = () => {
                         }}
                         onClick={() => navigate("me")}
                     />
-                    <SideBarLinks links={adminLinks} logOut={logOut} />
-                </SideBar>
+                    <SideBarNavLinks links={adminLinks} logOut={logOut} />
+                </SideBarNav>
                 <AppPage>
                     <Outlet />
                 </AppPage>

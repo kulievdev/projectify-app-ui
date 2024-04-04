@@ -15,8 +15,6 @@ export * from "./Checkbox";
 export * from "./Switch";
 export * from "./Progress";
 export * from "./Table";
-export * from "./SideBar";
+export * from "./SideBarNav";
 
 export * from "./utils";
-
-// cleared
