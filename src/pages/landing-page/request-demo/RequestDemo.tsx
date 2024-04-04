@@ -82,6 +82,10 @@ const Input = styled.input`
     padding: var(--space-16) var(--space-48);
     border: 0.15rem solid var(--jaguar-200);
     border-radius: var(--space-16);
+
+    &:focus {
+        outline: 0.4rem solid var(--primary-500);
+    }
 `;
 
 const InputIcon = styled(Icon)`
