@@ -6,7 +6,7 @@ import { useFocus } from "../../../hooks/useFocus";
 import { Link, useNavigate } from "react-router-dom";
 import { adminService } from "../../../api";
 import toast from "react-hot-toast";
-import flatIronBuilding from "../../../assets/images/flat-iron-building.jpg";
+import office from "../../../assets/images/office2.jpg";
 import { useLocalStorage } from "../../../hooks/useLocalStorage";
 import { PasswordInputWithEye } from "../../components/PasswordInputWithEye";
 
@@ -95,7 +95,7 @@ const AdminLogin = () => {
     };
 
     return (
-        <AuthWrapper imageUrl={flatIronBuilding} pageTitle="Login" switchLayout>
+        <AuthWrapper imageUrl={office} pageTitle="Login" switchLayout>
             <Form onSubmit={authorizeLogin}>
                 <Input
                     labelText="Email"
