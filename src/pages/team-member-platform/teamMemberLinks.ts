@@ -1,6 +1,6 @@
-import { SideBarLinksGroup } from "../../design-system";
+import { SideBarNavLinksGroup } from "../../design-system";
 
-const teamMemberLinks: SideBarLinksGroup[] = [
+const teamMemberLinks: SideBarNavLinksGroup[] = [
     {
         title: "Menu",
         links: [

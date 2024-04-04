@@ -2,9 +2,9 @@ import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import { Typography } from "../Typography";
 import { Icon } from "../Icon";
-import { SideBarLinksProps } from "./types";
+import { SideBarNavLinksProps } from "./types";
 
-const SideBarLinks: React.FC<SideBarLinksProps> = ({ links, logOut }) => {
+const SideBarNavLinks: React.FC<SideBarNavLinksProps> = ({ links, logOut }) => {
     return (
         <>
             {links.map((group, idx) => {
@@ -54,4 +54,4 @@ const SideBarLinks: React.FC<SideBarLinksProps> = ({ links, logOut }) => {
     );
 };
 
-export { SideBarLinks };
+export { SideBarNavLinks };

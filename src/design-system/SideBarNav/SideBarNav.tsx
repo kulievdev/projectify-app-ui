@@ -1,12 +1,12 @@
 import React from "react";
-import "./SideBar.css";
+import "./SideBarNav.css";
 import { Logo } from "../Logo";
 
-type SideBarProps = {
+type SideBarNavProps = {
     children: React.ReactNode;
 };
 
-const SideBar: React.FC<SideBarProps> = ({ children }) => {
+const SideBarNav: React.FC<SideBarNavProps> = ({ children }) => {
     return (
         <nav className="side-bar">
             <div className="side-bar__logo-wrapper">
@@ -17,4 +17,4 @@ const SideBar: React.FC<SideBarProps> = ({ children }) => {
     );
 };
 
-export { SideBar };
+export { SideBarNav };
