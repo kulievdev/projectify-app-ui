@@ -3,6 +3,8 @@ import { Button, Logo } from "../../../design-system";
 import HamburgerButton from "../components/HamburgerButton";
 import LayoutWrapper from "../components/LayoutWrapper";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import LoginModal from "../components/LoginModal";
 
 const NavWrapper = styled(LayoutWrapper)``;
 
@@ -109,6 +111,12 @@ const MobileCtaWrapper = styled.div`
 
 const Navbar = () => {
     const [isActive, setIsActive] = useState(false);
+    const navigate = useNavigate();
+    const [show, setShow] = useState(false);
+
+    const closeModal = () => {
+        setShow(false);
+    };
 
     return (
         <NavWrapper id="home">
@@ -126,10 +134,23 @@ const Navbar = () => {
                     </List>
                 </UnorderedList>
                 <CtaWrapper>
-                    <SignUpButton size="md" shape="circle">
-                        Sign up
+                    <SignUpButton
+                        size="md"
+                        shape="circle"
+                        onClick={() => {
+                            navigate("admin/sign-up");
+                        }}
+                    >
+                        Sign Up
                     </SignUpButton>
-                    <LoginButton color="primary" size="md" shape="circle">
+                    <LoginButton
+                        color="primary"
+                        size="md"
+                        shape="circle"
+                        onClick={() => {
+                            setShow(true);
+                        }}
+                    >
                         Login
                     </LoginButton>
                 </CtaWrapper>
@@ -185,16 +206,18 @@ const Navbar = () => {
                                 size="md"
                                 shape="circle"
                                 onClick={() => {
+                                    navigate("admin/sign-up");
                                     setIsActive(false);
                                 }}
                             >
-                                Sign up
+                                Sign Up
                             </SignUpButton>
                             <LoginButton
                                 color="primary"
                                 size="md"
                                 shape="circle"
                                 onClick={() => {
+                                    setShow(true);
                                     setIsActive(false);
                                 }}
                             >
@@ -204,6 +227,7 @@ const Navbar = () => {
                     </MobileNav>
                 </MobileNavWrapper>
             )}
+            <LoginModal show={show} closeModal={closeModal} />
         </NavWrapper>
     );
 };
