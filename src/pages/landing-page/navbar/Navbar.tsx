@@ -83,7 +83,7 @@ const MobileNavHeader = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: var(--space-24) 4rem var(--space-24) 2rem;
+    padding: var(--space-24) 2rem var(--space-24) 2rem;
     margin-bottom: var(--space-50);
 `;
 
