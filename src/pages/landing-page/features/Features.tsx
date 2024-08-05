@@ -109,8 +109,8 @@ const Features = () => {
                 </DemoButton>
                 <ActionModal
                     title="Demo"
-                    adminNav="admin/login"
-                    teamMemberNav="team-member/login"
+                    adminNav="admin/demo-login"
+                    teamMemberNav="team-member/demo-login"
                     show={show}
                     closeModal={closeModal}
                 />
