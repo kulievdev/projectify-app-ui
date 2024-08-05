@@ -27,6 +27,7 @@ import { TeamMemberPersonalTasks } from "../pages/team-member-platform/personal-
 import { SettingsPage, SupportPage } from "../pages/components";
 import { TeamMemberUser } from "../pages/team-member-platform/user/TeamMemberUser";
 import { AdminDemoLogin } from "../pages/admin-auth/login/AdminDemoLogin";
+import { TeamMemberDemoLogin } from "../pages/team-member-auth/login/TeamMemberDemoLogin";
 
 export const router = createBrowserRouter(
     createRoutesFromElements(
@@ -103,6 +104,15 @@ export const router = createBrowserRouter(
                 element={
                     <Auth
                         component={<TeamMemberLogin />}
+                        userType={UserRole.teamMember}
+                    />
+                }
+            />
+            <Route
+                path="team-member/demo-login"
+                element={
+                    <Auth
+                        component={<TeamMemberDemoLogin />}
                         userType={UserRole.teamMember}
                     />
                 }
