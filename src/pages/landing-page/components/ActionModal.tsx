@@ -3,6 +3,9 @@ import { Typography, Modal, Button } from "../../../design-system";
 import { useNavigate } from "react-router-dom";
 
 type CreateTaskModalProps = {
+    title: string;
+    adminNav: string;
+    teamMemberNav: string;
     show: boolean;
     closeModal: () => void;
 };
@@ -18,13 +21,19 @@ const Buttons = styled.div`
     margin-bottom: var(--space-30);
 `;
 
-const LoginModal: React.FC<CreateTaskModalProps> = ({ show, closeModal }) => {
+const ActionModal: React.FC<CreateTaskModalProps> = ({
+    title,
+    adminNav,
+    teamMemberNav,
+    show,
+    closeModal
+}) => {
     const navigate = useNavigate();
 
     return (
         <Modal show={show} position="center">
             <ModalTitle variant="paragraphLG" weight="medium">
-                Login as
+                {title} as
             </ModalTitle>
             <Buttons>
                 <Button
@@ -34,7 +43,7 @@ const LoginModal: React.FC<CreateTaskModalProps> = ({ show, closeModal }) => {
                     variant="outlined"
                     fullWidth
                     onClick={() => {
-                        navigate("admin/login");
+                        navigate(adminNav);
                     }}
                 >
                     Admin
@@ -46,7 +55,7 @@ const LoginModal: React.FC<CreateTaskModalProps> = ({ show, closeModal }) => {
                     variant="outlined"
                     fullWidth
                     onClick={() => {
-                        navigate("team-member/login");
+                        navigate(teamMemberNav);
                     }}
                 >
                     Team Member
@@ -66,4 +75,4 @@ const LoginModal: React.FC<CreateTaskModalProps> = ({ show, closeModal }) => {
     );
 };
 
-export default LoginModal;
+export default ActionModal;

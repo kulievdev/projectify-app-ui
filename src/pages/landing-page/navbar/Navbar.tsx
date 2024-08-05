@@ -4,7 +4,7 @@ import HamburgerButton from "../components/HamburgerButton";
 import LayoutWrapper from "../components/LayoutWrapper";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import LoginModal from "../components/LoginModal";
+import ActionModal from "../components/ActionModal";
 
 const NavWrapper = styled(LayoutWrapper)``;
 
@@ -227,7 +227,13 @@ const Navbar = () => {
                     </MobileNav>
                 </MobileNavWrapper>
             )}
-            <LoginModal show={show} closeModal={closeModal} />
+            <ActionModal
+                title="Login"
+                adminNav="admin/login"
+                teamMemberNav="team-member/login"
+                show={show}
+                closeModal={closeModal}
+            />
         </NavWrapper>
     );
 };

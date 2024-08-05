@@ -4,6 +4,8 @@ import heroImg from "../images/hero-image.png";
 import membersImg from "../images/members.png";
 import googleImg from "../images/googleSeo.png";
 import LayoutWrapper from "../components/LayoutWrapper";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const HeroSection = styled(LayoutWrapper)``;
 
@@ -133,6 +135,13 @@ const HeroGoogleImage = styled.img`
 `;
 
 const Hero = () => {
+    const navigate = useNavigate();
+    const [show, setShow] = useState(false);
+
+    const closeModal = () => {
+        setShow(false);
+    };
+
     return (
         <HeroSection id="hero">
             <HeroSectionContainer>
@@ -149,7 +158,14 @@ const Hero = () => {
                         simplify your project management journey and supercharge
                         your success.
                     </HeroText>
-                    <Button color="primary" size="lg" shape="rounded">
+                    <Button
+                        color="primary"
+                        size="lg"
+                        shape="rounded"
+                        onClick={() => {
+                            setShow(true);
+                        }}
+                    >
                         Try a Demo
                     </Button>
                 </HeroContent>
