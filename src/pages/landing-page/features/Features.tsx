@@ -3,6 +3,8 @@ import { Button, Typography } from "../../../design-system";
 import currentFeatures from "./currentFeatures";
 import FeatureCard from "./FeatureCard";
 import LayoutWrapper from "../components/LayoutWrapper";
+import ActionModal from "../components/ActionModal";
+import { useState } from "react";
 
 const FeaturesSection = styled(LayoutWrapper)``;
 
@@ -60,6 +62,12 @@ const DemoButton = styled(Button)`
 `;
 
 const Features = () => {
+    const [show, setShow] = useState(false);
+
+    const closeModal = () => {
+        setShow(false);
+    };
+
     return (
         <FeaturesSection id="features">
             <FeaturesSectionContainer>
@@ -89,9 +97,23 @@ const Features = () => {
                         />
                     ))}
                 </FeaturesWrapper>
-                <DemoButton color="primary" shape="circle" size="lg">
+                <DemoButton
+                    color="primary"
+                    shape="circle"
+                    size="lg"
+                    onClick={() => {
+                        setShow(true);
+                    }}
+                >
                     Try a Demo
                 </DemoButton>
+                <ActionModal
+                    title="Demo"
+                    adminNav="admin/demo-login"
+                    teamMemberNav="team-member/demo-login"
+                    show={show}
+                    closeModal={closeModal}
+                />
             </FeaturesSectionContainer>
         </FeaturesSection>
     );

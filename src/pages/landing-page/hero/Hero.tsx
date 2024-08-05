@@ -5,7 +5,7 @@ import membersImg from "../images/members.png";
 import googleImg from "../images/googleSeo.png";
 import LayoutWrapper from "../components/LayoutWrapper";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import ActionModal from "../components/ActionModal";
 
 const HeroSection = styled(LayoutWrapper)``;
 
@@ -135,7 +135,6 @@ const HeroGoogleImage = styled.img`
 `;
 
 const Hero = () => {
-    const navigate = useNavigate();
     const [show, setShow] = useState(false);
 
     const closeModal = () => {
@@ -188,6 +187,13 @@ const Hero = () => {
                     <HeroGoogleImage src={googleImg} alt="Google Image" />
                     <HeroMainImage src={heroImg} alt="Landing Page Image" />
                 </HeroImageWrapper>
+                <ActionModal
+                    title="Demo"
+                    adminNav="admin/demo-login"
+                    teamMemberNav="team-member/demo-login"
+                    show={show}
+                    closeModal={closeModal}
+                />
             </HeroSectionContainer>
         </HeroSection>
     );
