@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Button, Icon, Typography } from "../../../design-system";
+import { useNavigate } from "react-router-dom";
 
 type PlanProps = {
     type: string;
@@ -149,6 +150,8 @@ const Plan: React.FC<PlanProps> = ({
     storage,
     extras
 }) => {
+    const navigate = useNavigate();
+
     return (
         <PlanCardWrapper $type={type}>
             <HeaderWrapper>
@@ -224,6 +227,9 @@ const Plan: React.FC<PlanProps> = ({
                 size="lg"
                 shape="circle"
                 color="primary"
+                onClick={() => {
+                    navigate("admin/sign-up");
+                }}
             >
                 {isMonthly ? "Try free for 15 days" : "30 Days Free Trial"}
             </CtaButton>
