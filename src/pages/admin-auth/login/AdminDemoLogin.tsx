@@ -41,9 +41,11 @@ const PasswordLabelWrapper = styled.div`
     }
 `;
 
-const AdminLogin = () => {
-    const [email, setEmail] = useState<string>("");
-    const [password, setPassword] = useState<string>("");
+const AdminDemoLogin = () => {
+    const [email, setEmail] = useState<string>(
+        "projectify.admin_demo@protonmail.com"
+    );
+    const [password, setPassword] = useState<string>("adminsecret123");
     const [isFormSubmitting, setIsFormSubmitting] = useState<boolean>(false);
     const [isError, setIsError] = useState<boolean>(false);
 
@@ -146,4 +148,4 @@ const AdminLogin = () => {
     );
 };
 
-export { AdminLogin };
+export { AdminDemoLogin };
