@@ -34,7 +34,8 @@ export type GetMeResponseType = {
 class Admin {
     url: string;
     constructor() {
-        this.url = `${process.env.REACT_APP_PROJECTIFY_API_URL}/admins`;
+        // this.url = `${process.env.REACT_APP_PROJECTIFY_API_URL}/admins`;
+        this.url = `${process.env.REACT_APP_PROJECTIFY_API_URL_LOCAL}/admins`;
     }
     async signUp(input: SignUpInput) {
         try {
@@ -49,6 +50,22 @@ class Admin {
                 const data = await response.json();
                 throw new Error(data.message);
             }
+            return response.json();
+        } catch (error) {
+            throw error;
+        }
+    }
+
+    async activateAccount(token: string) {
+        try {
+            const response = await fetch(
+                `${this.url}/activate-account?activationToken=${token}`
+            );
+            if (!response.ok) {
+                const data = await response.json();
+                throw new Error(data.message);
+            }
+
             return response.json();
         } catch (error) {
             throw error;

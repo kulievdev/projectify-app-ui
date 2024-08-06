@@ -28,6 +28,7 @@ import { SettingsPage, SupportPage } from "../pages/components";
 import { TeamMemberUser } from "../pages/team-member-platform/user/TeamMemberUser";
 import { AdminDemoLogin } from "../pages/admin-auth/login/AdminDemoLogin";
 import { TeamMemberDemoLogin } from "../pages/team-member-auth/login/TeamMemberDemoLogin";
+import { AdminAccountActivation } from "../pages/admin-auth/activate-account/AccountActivation";
 
 export const router = createBrowserRouter(
     createRoutesFromElements(
@@ -43,11 +44,11 @@ export const router = createBrowserRouter(
                 }
             />
             <Route
-                path="admin/activate"
+                path="admin/activate-account"
                 element={
                     <Auth
-                        component={<div>Success</div>}
                         userType={UserRole.admin}
+                        component={<AdminAccountActivation />}
                     />
                 }
             />
