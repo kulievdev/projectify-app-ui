@@ -34,8 +34,8 @@ export type GetMeResponseType = {
 class Admin {
     url: string;
     constructor() {
-        // this.url = `${process.env.REACT_APP_PROJECTIFY_API_URL}/admins`;
-        this.url = `${process.env.REACT_APP_PROJECTIFY_API_URL_LOCAL}/admins`;
+        this.url = `${process.env.REACT_APP_PROJECTIFY_API_URL}/admins`;
+        // this.url = `${process.env.REACT_APP_PROJECTIFY_API_URL_LOCAL}/admins`;
     }
     async signUp(input: SignUpInput) {
         try {
