@@ -4,11 +4,10 @@ import { Avatar } from "../../design-system/Avatar";
 import { Icon, Typography } from "../../design-system";
 
 const UserBase = styled.div`
-    margin: 0 auto;
+    margin: 0 var(--space-12);
     background-color: var(--jaguar-25);
     border-radius: var(--border-radius-16);
     padding: var(--space-12) var(--space-12) var(--space-12) var(--space-8);
-
     display: flex;
     align-items: center;
     gap: var(--space-12);
