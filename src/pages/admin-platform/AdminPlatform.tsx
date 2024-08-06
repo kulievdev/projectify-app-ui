@@ -23,15 +23,28 @@ const AdminPlatform = () => {
     };
 
     useEffect(() => {
-        const handleBeforeUnload = (event: BeforeUnloadEvent) => {
-            removeItem("authToken");
-            removeItem("userRole");
-            dispatch({ type: Actions.RESET_STATE });
+        let isTabHidden = false;
+
+        const handleBeforeUnload = () => {
+            if (isTabHidden) {
+                removeItem("authToken");
+                removeItem("userRole");
+                dispatch({ type: Actions.RESET_STATE });
+            }
         };
 
+        const handleVisibilityChange = () => {
+            isTabHidden = document.hidden;
+        };
+
+        document.addEventListener("visibilitychange", handleVisibilityChange);
         window.addEventListener("beforeunload", handleBeforeUnload);
 
         return () => {
+            document.removeEventListener(
+                "visibilitychange",
+                handleVisibilityChange
+            );
             window.removeEventListener("beforeunload", handleBeforeUnload);
         };
     }, [dispatch, removeItem]);

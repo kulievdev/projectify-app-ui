@@ -17,7 +17,8 @@ type GetAllAPIResponse = {
 class AdminTeamMemberService {
     url: string;
     constructor() {
-        this.url = `${process.env.REACT_APP_PROJECTIFY_API_URL}/team-members`;
+        // this.url = `${process.env.REACT_APP_PROJECTIFY_API_URL}/team-members`;
+        this.url = `${process.env.REACT_APP_PROJECTIFY_API_URL_LOCAL}/team-members`;
     }
 
     async create(input: CreateInput): Promise<CreateAPIResponse> {
