@@ -1,3 +1,4 @@
+import React, { useEffect } from "react";
 import { Outlet, useNavigate } from "react-router-dom";
 import { SideBarNav, SideBarNavLinks, Toaster } from "../../design-system";
 import { AppLayout, AppPage, SideBarUser } from "../components";
@@ -20,6 +21,20 @@ const AdminPlatform = () => {
         dispatch({ type: Actions.RESET_STATE });
         navigate("/admin/login");
     };
+
+    useEffect(() => {
+        const handleBeforeUnload = (event: BeforeUnloadEvent) => {
+            removeItem("authToken");
+            removeItem("userRole");
+            dispatch({ type: Actions.RESET_STATE });
+        };
+
+        window.addEventListener("beforeunload", handleBeforeUnload);
+
+        return () => {
+            window.removeEventListener("beforeunload", handleBeforeUnload);
+        };
+    }, [dispatch, removeItem]);
 
     return (
         <>
