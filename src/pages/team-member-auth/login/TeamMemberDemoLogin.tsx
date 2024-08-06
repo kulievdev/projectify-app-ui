@@ -43,7 +43,7 @@ const PasswordLabelWrapper = styled.div`
 
 const TeamMemberDemoLogin = () => {
     const [email, setEmail] = useState<string>(
-        "projectify.team_member_demo@protonmail.com"
+        "projectify.tm_demo@protonmail.com"
     );
     const [password, setPassword] = useState<string>("team-member-secret123");
     const [isFormSubmitting, setIsFormSubmitting] = useState<boolean>(false);
