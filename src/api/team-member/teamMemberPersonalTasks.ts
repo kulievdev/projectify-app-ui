@@ -15,7 +15,7 @@ interface CreateAPIResponse {
 class TeamMemberPersonalTasks {
     url: string;
     constructor() {
-        this.url = `${process.env.REACT_APP_PROJECTIFY_API_URL}/team-member/me`;
+        this.url = `${process.env.REACT_APP_PROJECTIFY_API_URL}/team-members/me`;
     }
 
     async createTask(input: CreateInput): Promise<CreateAPIResponse> {
