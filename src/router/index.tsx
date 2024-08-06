@@ -43,6 +43,15 @@ export const router = createBrowserRouter(
                 }
             />
             <Route
+                path="admin/activate"
+                element={
+                    <Auth
+                        component={<div>Success</div>}
+                        userType={UserRole.admin}
+                    />
+                }
+            />
+            <Route
                 path="admin/login"
                 element={
                     <Auth
