@@ -84,7 +84,7 @@ const AdminLogin = () => {
             setEmail("");
             setPassword("");
 
-            navigate("../admin/platform");
+            navigate("../admin/platform/projects");
         } catch (error) {
             setIsFormSubmitting(false);
             setIsError(true);
