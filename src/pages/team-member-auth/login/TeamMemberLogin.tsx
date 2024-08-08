@@ -9,6 +9,7 @@ import toast from "react-hot-toast";
 import { useNavigate, Link } from "react-router-dom";
 import { useLocalStorage } from "../../../hooks/useLocalStorage";
 import { PasswordInputWithEye } from "../../components/PasswordInputWithEye";
+import { Spinner } from "../../components/Auth/Spinner";
 
 const Form = styled.form`
     width: 100%;
@@ -131,7 +132,7 @@ const TeamMemberLogin = () => {
                     shape="rounded"
                     disabled={isFormSubmitting || !isFormSubmittable}
                 >
-                    Login
+                    {isFormSubmitting ? <Spinner /> : "Login"}
                 </Button>
             </Form>
         </AuthWrapper>

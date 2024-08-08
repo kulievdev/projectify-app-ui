@@ -9,6 +9,7 @@ import toast from "react-hot-toast";
 import office from "../../../assets/images/office2.jpg";
 import { useLocalStorage } from "../../../hooks/useLocalStorage";
 import { PasswordInputWithEye } from "../../components/PasswordInputWithEye";
+import { Spinner } from "../../components/Auth/Spinner";
 
 const Form = styled.form`
     width: 100%;
@@ -135,7 +136,7 @@ const AdminDemoLogin = () => {
                     disabled={isFormSubmitting || !isFormSubmittable}
                     fullWidth={true}
                 >
-                    Login
+                    {isFormSubmitting ? <Spinner /> : "Login"}
                 </Button>
             </Form>
 

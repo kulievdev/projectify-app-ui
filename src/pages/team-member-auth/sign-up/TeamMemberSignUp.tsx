@@ -8,6 +8,7 @@ import { teamMemberService } from "../../../api";
 import { useSearchParams, useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import { PasswordInputWithEye } from "../../components/PasswordInputWithEye";
+import { Spinner } from "../../components/Auth/Spinner";
 
 const Form = styled.form`
     width: 100%;
@@ -119,7 +120,7 @@ const TeamMemberCreatePassword = () => {
                     className="create-password__submit-button"
                     disabled={isFormSubmitting || !isFormSubmittable}
                 >
-                    Create Password
+                    {isFormSubmitting ? <Spinner /> : "Create Password"}
                 </Button>
             </Form>
 

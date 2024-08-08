@@ -7,6 +7,7 @@ import toast from "react-hot-toast";
 import { adminService } from "../../../api";
 import flatIronBuilding from "../../../assets/images/flat-iron-building.jpg";
 import { PasswordInputWithEye } from "../../components/PasswordInputWithEye";
+import { Spinner } from "../../components/Auth/Spinner";
 
 const Form = styled.form`
     width: 100%;
@@ -191,7 +192,7 @@ const AdminSignUp = () => {
                     className="sign-up__submit-button"
                     disabled={isFormSubmitting || !isFormSubmittable}
                 >
-                    Sign Up
+                    {isFormSubmitting ? <Spinner /> : "Sign Up"}
                 </Button>
             </Form>
             <div style={{ marginTop: "auto" }}>

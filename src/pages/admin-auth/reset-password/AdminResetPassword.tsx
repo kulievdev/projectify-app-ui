@@ -8,6 +8,7 @@ import { adminService } from "../../../api";
 import toast from "react-hot-toast";
 import updatePassword from "../../../assets/illustrations/reset-password.svg";
 import { PasswordInputWithEye } from "../../components/PasswordInputWithEye";
+import { Spinner } from "../../components/Auth/Spinner";
 
 const Form = styled.form`
     width: 100%;
@@ -87,7 +88,7 @@ const AdminResetPassword = () => {
                     fullWidth={true}
                     disabled={isFormSubmitting || !isFormSubmittable}
                 >
-                    Reset My Password
+                    {isFormSubmitting ? <Spinner /> : "Reset My Password"}
                 </Button>
             </Form>
         </PasswordWrapper>
